@@ -1,6 +1,10 @@
 name: Generate Deepgram Sarah voice
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/generate_voice.py'
+      - '.github/workflows/generate-deepgram-voice.yml'
 permissions:
   contents: write
 jobs:
