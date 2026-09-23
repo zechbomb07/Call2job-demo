@@ -3,6 +3,7 @@ import json, os, pathlib, urllib.parse, urllib.request
 KEY=os.environ["DEEPGRAM_API_KEY"]
 VOICE=os.environ.get("DEEPGRAM_VOICE","flux-sharon-en")
 OUT=pathlib.Path("audio"); OUT.mkdir(exist_ok=True)
+# trigger 2026-09-23
 clips={
 "greeting":"Thanks for calling BrightSpark Electrical, Sarah speaking. How can I help today?",
 "identity":"Yes, I'm Sarah, the business's AI receptionist. I take enquiries and organise job details for the team.",
