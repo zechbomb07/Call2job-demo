@@ -24,7 +24,7 @@ clips={
 "captured":"Your job is captured and ready for the electrician."
 }
 for name,text in clips.items():
-    url="https://api.deepgram.com/v2/speak?"+urllib.parse.urlencode({"model":VOICE,"encoding":"mp3"})
+    url="https://api.deepgram.com/v2/speak?"+urllib.parse.urlencode({"model":VOICE})
     req=urllib.request.Request(url,data=json.dumps({"text":text}).encode(),headers={"Authorization":"Token "+KEY,"Content-Type":"application/json"})
     with urllib.request.urlopen(req,timeout=60) as r:
         (OUT/(name+".mp3")).write_bytes(r.read())
